@@ -1,0 +1,148 @@
+---
+  import shoeApp from '../assets/screenshots/shoe-app.png';
+  import hotelApp from '../assets/screenshots/hotel-app.png';
+  import apiHotelApp from '../assets/screenshots/api-hotel-app.png';
+  import stonersWeb from '../assets/screenshots/stoners-web.png';
+  import landingPageBootstrapWeb from '../assets/screenshots/landing-page-with-bootstrap5-web.png';
+  import paperDoveApp from '../assets/screenshots/paper-dove-app.png';
+  import shoeStoreWeb from '../assets/screenshots/shoe-store-web.png';
+
+  const projects = [
+    {
+      title: 'APP de gestion de calzado',
+      image: shoeApp,
+      tools: 'PYTHON | DJANGO | BOOTSTRAP',
+      urlWeb: 'https://shoe-app.juanjosepau.com',
+      urlGit: 'https://github.com/juanjosestone/shoe-app#readme',
+    },
+    {
+      title: 'Sistema de Gestion Hotelera',
+      image: hotelApp,
+      tools: 'JAVASCRIPT | VUE | VUETIFY',
+      urlWeb: 'https://hotel.juanjosepau.com',
+      urlGit: 'https://github.com/juanjosestone/hotel-app#readme',
+    },
+    {
+      title: 'API de Gestion Hotelera',
+      image: apiHotelApp,
+      tools: 'PHP | LARAVEL',
+      urlWeb: 'https://api.hotel.juanjosepau.com',
+      urlGit: 'https://github.com/juanjosestone/api-hotel-app#readme',
+    },
+    {
+      title: 'Woocomerce Stoners Shoes',
+      image: stonersWeb,
+      tools: 'WORDPRESS',
+      urlWeb: 'https://stonersshoes.com',
+      urlGit: '#',
+    },
+    {
+      title: 'Sitio web con Bootstrap 5',
+      image: landingPageBootstrapWeb,
+      tools: 'BOOTSTRAP 5',
+      urlWeb: 'https://landing-page-with-bootstrap5-techpro.vercel.app',
+      urlGit: 'https://github.com/JuanJoseStone/landing-page-with-bootstrap5-techpro#readme',
+    },
+    {
+      title: 'Aplicacion de salas de Chat',
+      image: paperDoveApp,
+      tools: 'JAVASCRIPT | VUE | TAILWIND',
+      urlWeb: 'https://vue-chat-52dd6.web.app',
+      urlGit: 'https://github.com/JuanJoseStone/paper-dove#readme',
+    },
+    {
+      title: 'Sitio web con HTML, CSS y SASS',
+      image: shoeStoreWeb,
+      tools: 'HTML | CSS | SASS',
+      urlWeb: 'https://shoe-store-blue.vercel.app/',
+      urlGit: 'https://github.com/JuanJoseStone/web-shoe-store#readme',
+    },
+  ]
+---
+
+<div class="scroll-animation-from-bottom-to-top portfolio relative bottom-24 left-1/2 w-full" style="transform: translateX(-50%)">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-14">
+      {projects.map((project) => (
+      <div
+        class="m-bg-item-exp portfolio-wrap transition delay-75 rounded-xl relative overflow-hidden z-10 h-52 cursor-pointer">
+        <img src={project.image} class="img-fluid w-full h-full" alt="">
+        <div class="portfolio-info opacity-0 absolute top-0 left-0 right-0 bottom-0 text-center
+          z-20 transition-all ease-in-out delay-75 flex flex-col justify-center items-center">
+          <h4 class="font-poppins text-lg text-white font-semibold">{project.title}</h4>
+          <p class="font-poppins text-white text-xs p-1">
+            {project.tools}
+          </p>
+          <div class="portfolio-links text-center z-30">
+            <a href={project.urlWeb} target="_blank" title="Ir a la web" class="my-0 mx-0.5 inline-block">
+              <i class="fas fa-globe text-3xl p-1 text-white social-networks"></i>
+            </a>
+            <a href={project.urlGit} target="_blank"  class="my-0 mx-0.5 inline-block" title="Ir al repositorio">
+              <i class="fab fa-github text-3xl p-1 text-white social-networks"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.portfolio .portfolio-wrap .portfolio-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+.portfolio .portfolio-wrap .portfolio-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+.portfolio .portfolio-wrap:hover .portfolio-info::before {
+  top: 15px;
+  right: 15px;
+}
+.portfolio .portfolio-wrap:hover .portfolio-info::after {
+  bottom: 15px;
+  left: 15px;
+}
+</style>

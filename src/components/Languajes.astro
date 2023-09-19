@@ -1,0 +1,31 @@
+<script>
+  import TagCloud from 'TagCloud';
+
+  const entries = [ 
+    'PHP',
+    'BOOTSTRAP',
+    'JAVASCRIPT',
+    'LARAVEL',
+    'VUETIFY',
+    'TAILWIND',
+    'HTML',
+    'CSS',
+    'SASS',
+    'WORDPRESS',
+    'NUXT',
+    'VUE',
+    'TYPESCRIPT',
+    'REACT',
+  ];
+
+  const options = {
+    radius: 150,
+    maxSpeed: 'normal',
+    initSpeed: 'normal',
+    keep: true
+  };
+
+  TagCloud('#tag-cloud', entries, options);
+</script>
+
+<div id="tag-cloud" class="flex justify-center"></div>

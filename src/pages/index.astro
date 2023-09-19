@@ -1,81 +1,478 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Social from '../components/Social.astro';
+import Header from '../components/Header.svelte';
+import Languajes from '../components/Languajes.astro';
+import Footer from '../components/Footer.astro';
+import Projects from '../components/Projects.svelte';
+
+import '../assets/css/colors.css';
+import '../assets/css/global.css';
+import '../assets/css/animations.css';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+	<main class="container mx-auto">
+		<Header client:load />
+
+		<section id="profile" class="w-full h-screen relative z-10 box-border mb-24 px-4 md:px-4 lg:px-6">
+			<div class="h-screen w-full">
+				<div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:gap-0 h-full w-full justify-center items-center">
+					<div class="animation-from-bottom-to-top flex flex-col justify-start items-center
+					 md:items-start relative top-4 md:top-0">
+						<div class="relative top-14 md:top-1/3 text-center md:text-left box-border">
+							<h3 class="font-poppins text-black text-1xl lg:text-2xl font-semibold">Hola, soy</h3>
+							<h2 class="m-text font-poppins text-3xl lg:text-5xl font-black tracking-widest">Juan Jose,</h2>
+							<h1 class="m-text-job font-poppins text-black text-xs font-extrabold mb-5">DESARROLLADOR WEB</h1>
+							<p class="text-sm font-manrope text-black font-normal text-center md:text-left w-80 md:w-full lg:w-3/4 mb-4">
+								Soy un autodidacta apasionado
+								por la tecnología, me gusta estar en constante
+								aprendizaje con ganas de ayudar y demostrar lo aprendido.
+							</p>
+							<div class="icon-games hidden md:flex">
+								<!-- <div class="triangle"></div>
+								<div class="circle"></div>
+								<div class="x"></div>
+								<div class="square"></div> -->
+								<div class="m-points"></div>
+							</div>
+						</div>
+					</div>
+					<div class="animation-from-right-to-left move-infinite m-bg-hero h-80 flex relative bottom-4 md:bottom-0
+						w-full md:h-full">
+					</div>
+				</div>
+
+        <div class="
+          animation-from-bottom-to-top
+          absolute z-10 right-1/2 lg:right-2 transform translate-x-1/2 lg:bottom-40 bottom-2
+          flex lg:flex-col items-center justify-center
+          m-text-secondary"
+        >
+				  <Social dinamicClass={"animate-social"} />
+			</div>
+		</section>
 	</main>
+
+	<section id="experience" class="box-border mb-24">
+    <div class="m-bg-knowledge m-bg-primary w-full">
+      <div class="container mx-auto text-white px-10 py-14 relative z-10">
+        <div class="scroll-animation-from-bottom-to-top m-title-knowledge">
+          <h2 class="font-poppins sm:pl-0 text-sm font-medium leading-loose text-white tracking-widest">MIS</h2>
+          <h1 class="font-poppins font-bold sm:pl-0 text-2xl mb-3 leading-loose text-white -mt-2">CONOCIMIENTOS</h1>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 rounded-lg">
+          <div class="scroll-animation-from-left-to-right mb-10 md:mb-0">
+            <p class="font-manrope font-normal text-sm mb-4">
+              Actualmente me especializo creando sitios y aplicaciones administrables.
+              <!-- implementando una mejor UX(experiencia de usuario). -->
+            </p>
+            <p class="font-manrope font-normal text-sm mb-2">
+              Las tecnologías en las cuales tengo mas experiencia son: 
+            </p>
+
+            <small class="font-poppins block text-xs mb-5">
+              <strong>JAVASCRIPT</strong> | <strong>TYPESCRIPT</strong> | <strong>VUE</strong> | <strong>NUXT</strong> | <strong>REACT</strong> | <strong>NEXT</strong> | <strong>CSS/SCSS</strong>
+            </small>
+
+            <p class="font-manrope font-semibold text-sm pb-1">Dominios adicionales</p>
+            <ul class="list-disc mb-7 pl-4 font-manrope text-sm">
+              <li>Laravel</li>
+              <li>Wordpress</li>
+              <li>Amplitude</li>
+              <li>Google Analytics</li>
+              <li>Make<em class="text-gray-100 text-sm">(Integromat)</em></li>
+            </ul>
+
+            <!-- <p class="font-manrope font-normal text-sm mb-4">
+              Ademas de algunas integraciones de analitica como Amplitude y Google Analytics
+            </p>
+
+            <p class="font-manrope font-normal text-sm mb-7">
+              Adicionalmente el manejo de algunas plataformas como Wordpress y Make(Integromat)
+            </p> -->
+            
+            <div class="flex justify-start arrow mb-10">
+              <p class="font-manrope font-normal text-sm inline">
+                Y algunos conocimientos extra: </p>
+              <div class="hidden md:flex justify-center border rounded-full border-white px-7 pt-0.5 ml-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 animate-arrow inline-block">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+                
+                <!-- <i class="fas fa-long-arrow-alt-right animate-arrow font-bold text-white text-xl leading-5"></i> -->
+              </div>
+            </div>
+          </div>
+          <div class="scroll-animation-from-right-to-left flex w-full h-full items-center justify-center md:justify-end md:-mt-8">
+            <div class="w-full lg:w-2/3 box-border">
+              <Languajes />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<section class="box-border p-6 container mx-auto mb-24">
+    <div class="scroll-animation-from-bottom-to-top">
+      <div class="font-poppins mx-auto text-center text-black flex flex-col items-center mb-10">
+        <h2 class="font-poppins text-sm tracking-widest">MI</h2>
+        <h2 class="font-poppins text-2xl text-black pb-2 font-bold">
+          EXPERIENCIA
+        </h2>
+        <div class="w-32 h-1 m-bg-primary"></div>
+      </div>
+      <p class="scroll-animation-from-left-to-right font-manrope text-center font-light w-full lg:w-1/2 mx-auto mb-8">
+          Con la experiencia que tengo puedo realizar todo tipo de proyectos web,
+          con la mayor calidad posible en cuanto a código y presentación.
+          Garantizando Responsabilidad y Compromiso en todos los proyectos que realize.
+      </p>
+    </div>
+    <div class="scroll-animation-from-bottom-to-top grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div class="py-6 flex flex-col items-center lg:items-end">
+        <div class="m-bg-primary">
+          <div class="m-bg-item-exp w-72 flex flex-col justify-center items-center px-5 py-12 rounded-sm
+            transform hover:-translate-y-1.5 transition ease-in-out delay-150 duration-300 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mb-10 m-text-primary text-center">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+            </svg>
+            
+            <h3 class="text-black text-sm mb-3">SITIOS WEB</h3>
+            <p class="font-manrope font-light text-sm text-center">
+              Actualmente e creado varios sitios webs con algunas tecnologias como
+              Sass, Bootstrap, Tailwind y Vuetify.
+              Tratando siempre de crearlos con las mejores practicas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="px-0 md:px-7 py-6 flex flex-col items-center">
+        <div class="m-bg-primary">
+          <div class="m-bg-item-exp w-72 flex flex-col justify-center items-center px-5 py-12 rounded-sm
+            transform hover:-translate-y-1.5 transition ease-in-out delay-150 duration-300 cursor-pointer">
+            <!-- <i class="fas fa-tools text-7xl mb-10 m-text-primary text-center"></i> -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mb-10 m-text-primary text-center">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+            </svg>
+            <h3 class="font-poppins text-black text-sm mb-3">APLICACIONES WEB</h3>
+            <p class="font-manrope font-light text-sm text-center">
+              Pude crear aplicaciones webs administrables algunos de ellos fueron, un
+              sistema de gestion de calzados con Django
+              y un sistema de gestion hotelera con Laravel y Vue.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="py-6 flex flex-col lg:items-start items-center">
+        <div class="m-bg-primary">
+          <div class="m-bg-item-exp w-72 flex flex-col justify-center items-center px-5 py-12 rounded-sm
+            transform hover:-translate-y-1.5 transition ease-in-out delay-150 duration-300 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mb-10 m-text-primary text-center">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z" />
+            </svg>
+            <h3 class="font-poppins text-black text-sm mb-3">WOOCOMMERCE</h3>
+            <p class="font-manrope font-light text-sm text-center">
+              <!-- Tuve la experiencia de crear tiendas online entre una de ellas 
+              fue para la empresa de calzado Stoners con el motivo de mostrar
+              y vender los productos de la empresa. -->
+
+              Tuve la oportunidad de crear sitios y tiendas online en Wordpress con la ayuda de Divi, 
+              tambien la creación de plugins para Wordpress.
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	<section id="projects" class="box-border relative">
+    <div class="m-bg-secondary w-full h-52">
+      <div class="scroll-animation-from-left-to-right container mx-auto h-full
+      text-white flex flex-col items-center justify-start pt-10">
+        <h2 class="block font-poppins text-sm tracking-widest">
+          PORTAFOLIO
+        </h2>
+        <h2 class="block font-poppins text-2xl pb-2 font-bold">
+          MIS PROYECTOS
+        </h2>
+        <div class="w-32 h-1 m-bg-primary">
+        </div>
+      </div>
+    </div>
+    <!-- <Portfolio /> -->
+  </section>
+
+  <Projects client:load />
+
+	<div id="about" class="w-full h-full mb-24">
+    <div class="scroll-animation-from-left-to-right m-bg-secondary lg:rounded-xl mb-24 p-10 lg:container lg:mx-auto md:w-full text-center text-black flex flex-col items-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 rounded-lg items-center justify-center">
+        <div class="my-4 md:my-0 font-poppins font-bold text-xl text-white">UN POCO SOBRE MI</div>
+        <div class="mb-10 md:mb-0 mx-auto lg:w-full font-manrope font-light text-sm text-white">Soy un autodidacta apasionado por la tecnología, me gusta estar en constante aprendizaje con ganas de ayudar y demostrar lo aprendido.</div>
+        <div>
+          <a href="/juan_jose_pauccara_cv.pdf" target="_blank" class="font-poppins m-bg-cyan text-white font-semibold px-6 py-3
+            rounded-xl magic-hover magic-hover__square">
+            Descargar CV
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-animation-from-bottom-to-top p-6">
+      <div class="mx-auto text-center text-black flex flex-col items-center mb-14">
+        <h2 class="font-poppins text-sm tracking-widest">MI</h2>
+        <h2 class="font-poppins text-2xl text-black pb-2 font-bold">
+          VIAJE PERSONAL
+        </h2>
+        <div class="w-32 h-1 m-bg-primary"></div>
+      </div>
+      <div class="flex flex-col md:grid grid-cols-9 mx-auto p-2 text-blue-50">
+        <!-- right -->
+        <div class="flex flex-row-reverse md:contents">
+          <div class="m-bg-item-exp col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md w-full md:w-80 text-gray-700">
+            <h2 class="font-poppins font-semibold text-xs mb-1">DESARROLLADOR WEB FRONTEND</h2>
+            <h3 class="font-poppins text-xs mb-3">
+              <a href="https://proefexperu.com" target="_blank" class="flex items-center gap-1 hover:underline">
+                Emp. Proefex Perú
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                </svg>
+              </a>
+            </h3>
+            <div class="leading-tight text-sm text-justify flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <small class="font-poppins">2022 - 2023</small>
+            </div>
+          </div>
+          <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+            <div class="h-full w-5 flex items-center justify-center">
+              <div class="h-full w-1 m-bg-primary pointer-events-none"></div>
+            </div>
+            <div
+              class="w-5 h-5 absolute top-1/2 -mt-3 rounded-full m-bg-primary shadow"
+            ></div>
+          </div>
+        </div>
+        <!-- right -->
+        <div class="flex md:contents">
+          <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+            <div class="h-full w-5 flex items-center justify-center">
+              <div class="h-full w-1 m-bg-primary pointer-events-none"></div>
+            </div>
+            <div
+              class="w-5 h-5 absolute top-1/2 -mt-3 rounded-full m-bg-primary shadow"
+            ></div>
+          </div>
+          <div class="m-bg-item-exp col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md w-full md:w-80 text-gray-700">
+            <h2 class="font-poppins font-semibold text-xs mb-1">TIENDA ONLINE (WOOCOMMERCE) DE CALZADOS</h2>
+            <h3 class="font-poppins text-xs mb-3">
+              <a href="https://stonersshoes.com/" target="_blank" class="flex items-center gap-1 hover:underline">
+                Emp. Stoners
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                </svg>
+              </a>
+            </h3>
+            <div class="leading-tight text-sm text-justify flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <small class="font-poppins">2021 - 2021</small>
+            </div>
+          </div>
+        </div>
+        <!-- left -->
+        <div class="flex flex-row-reverse md:contents">
+          <div class="m-bg-item-exp col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md w-full md:w-80 text-gray-700">
+            <h2 class="font-poppins font-semibold text-xs mb-1">APLICACION WEB DE GESTION DE CALZADO</h2>
+            <h3 class="font-poppins text-xs mb-3">Emp. Nik Fort</h3>
+            <div class="leading-tight text-sm text-justify flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <small class="font-poppins">2021 - 2021</small>
+            </div>
+          </div>
+          <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+            <div class="h-full w-5 flex items-center justify-center">
+              <div class="h-full w-1 m-bg-primary pointer-events-none"></div>
+            </div>
+            <div
+              class="w-5 h-5 absolute top-1/2 -mt-3 rounded-full m-bg-primary shadow"
+            ></div>
+          </div>
+        </div>
+        <!-- right -->
+        <div class="flex md:contents">
+          <div class="col-start-5 col-end-6 mr-10 md:mx-auto relative">
+            <div class="h-full w-5 flex items-center justify-center">
+              <div class="h-full w-1 m-bg-primary pointer-events-none"></div>
+            </div>
+            <div
+              class="w-5 h-5 absolute top-1/2 -mt-3 rounded-full m-bg-primary shadow"
+            ></div>
+          </div>
+          <div class="m-bg-item-exp col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md w-full md:w-80 text-gray-700">
+            <h2 class="font-poppins font-semibold text-xs mb-1">CURSO DE SOPORTE Y MANTENIMIENTO DE COMPUTADORAS</h2>
+            <h3 class="font-poppins text-xs mb-3">
+              <a href="https://institutopacifico.pe/" target="_blank" class="flex items-center gap-1 hover:underline">
+                Inst. de Especialización Pacífico
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                </svg>
+              </a>
+            </h3>
+            <div class="leading-tight text-sm text-justify flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <small class="font-poppins">2019 - 2020</small>
+            </div>
+          </div>
+        </div>
+        <!-- left -->
+        <div class="flex flex-row-reverse md:contents">
+          <div class="m-bg-item-exp col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md w-full md:w-80 text-gray-700">
+            <h2 class="font-poppins font-semibold text-xs mb-1">CARRERA TECNICA DE COMPUTACIÓN E INFORMATICA</h2>
+            <h3 class="font-poppins text-xs mb-3">
+              <a href="https://www.institutohipolitounanue.edu.pe/" target="_blank" class="flex items-center gap-1 hover:underline">
+                Inst. Hipolito Unanue
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+                </svg>
+              </a>
+            </h3>
+            <div class="leading-tight text-sm text-justify flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <small class="font-poppins">2017 - 2020</small>
+            </div>
+          </div>
+          <div class="col-start-5 col-end-6 md:mx-auto relative mr-10">
+            <div class="h-full w-5 flex items-center justify-center">
+              <div class="h-full w-1 m-bg-primary pointer-events-none"></div>
+            </div>
+            <div
+              class="w-5 h-5 absolute top-1/2 -mt-3 rounded-full m-bg-primary shadow"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<Footer />
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+  .splide .splide__track--slide {
+    width: 90%!important;
+    margin: auto;
+    height: 100px;
+  }
+
+  .splide__slide {
+    width: 210px;
+  }
+	.triangle, .circle, .x, .square {
+		width: 20px;
+		height: 20px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin-right: 14px;
+	} 
+
+	.triangle {
+		background-image: url("../assets/shapes/triangle.png");
+		
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+	.circle {
+		background-image: url("../assets/shapes/circle.png");
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	.x {
+		background-image: url("../assets/shapes/x.png");
+
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+	.square {
+		background-image: url("../assets/shapes/square.png");
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
+	.m-points {
+		background-image: url("../assets/shapes/points3.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		width: 150px;
+		height: 35px;
 	}
-	.instructions strong {
-		color: rgb(var(--accent));
+	.m-bg-hero {
+		background-image: url("../assets/img/hero2.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	.m-text {
+		font-weight: 700;
+		background-image: url("../assets/img/back-text.jpg");
+		background-size: cover;
+		background-clip: text;
+		color: rgba(1, 223, 68, 0.315); 
+	}
+	.m-text-job {
+		letter-spacing: 7px;
+	}
+	.move-infinite {
+		animation: move 3s ease-out infinite;
+	}
+	@keyframes move {
+		0% {
+			transform: translateY(-5px);
+		}
+		50% {
+			transform: translateY(5px);
+		}
+		100% {
+			transform: translateY(-5px);
+		}
+	}
+
+
+	.m-bg-knowledge {
+		background-image: url("../assets/img/code.jpg");
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+	}
+	.m-bg-knowledge::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: var(--secondary-light);
+	}
+
+	.m-title-knowledge h2::after {
+		content: "";
+		width: 120px;
+		height: 3px;
+		display: inline-block;
+		background: var(--primary);
+		margin: 2px 10px;
+	}
+
+	/* Experience */
+	.m-bg-item-exp {
+		background: rgb(255, 255, 255);
+		box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
 	}
 </style>

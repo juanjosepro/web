@@ -1,0 +1,208 @@
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+.font-manrope {
+  font-family: 'Manrope', sans-serif;
+}
+
+.splide__track {
+  width: 80%!important;
+  margin: auto!important;
+  height: 170px;
+}
+
+.splide__slide {
+  cursor: pointer;
+}
+
+.splide__slide > div{
+  border-radius: 8px;
+  padding: 10px;
+  transition: 500ms;
+}
+
+.splide__slide.is-active > div {
+  background: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.splide__slide.is-active img {
+  transform: scale(1.2);
+}
+
+.splide__arrow {
+  background: tomato;
+}
+
+.splide__pagination__page {
+  background: #95a5a6!important;
+  border: 0;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  margin: 0 0.1rem;
+  padding: 0;
+  position: relative;
+  transition: background-color .2s ease,color .2s ease;
+  width: 10px;
+}
+.splide__pagination__page.is-active {
+  background: var(--primary)!important;
+}
+
+.project__screenshot.circle-animate-rotate {
+  animation: screeenshotAnimateInMobile 1s forwards;
+}
+.project__screenshot.circle-rotate-exit {
+  animation: screeenshotAnimateOutMobile 1s forwards;
+}
+.image-animate-rotate {
+  animation: screeenshotImageAnimateInMobile 1s forwards;
+}
+.image-rotate-exit {
+  animation: screeenshotImageAnimateOutMobile 1s forwards;
+}
+
+@media (min-width: 640px) {
+  .project__screenshot.circle-animate-rotate {
+    animation: screeenshotAnimateInDesktop 1s forwards;
+  }
+  .project__screenshot.circle-rotate-exit {
+    animation: screeenshotAnimateOutDesktop 1s forwards;
+  }
+  .image-animate-rotate {
+    animation: screeenshotImageAnimateInDesktop 1s forwards;
+  }
+  .image-rotate-exit {
+    animation: screeenshotImageAnimateOutDesktop 1s forwards;
+  }
+}
+
+@keyframes screeenshotAnimateInMobile {
+  0% {
+    transform: translateX(-50%) translateY(-75%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-75%) rotate(143deg);
+  }
+}
+@keyframes screeenshotAnimateOutMobile {
+  0% {
+    transform: translateX(-50%) translateY(-75%) rotate(143deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-75%) rotate(300deg);
+  }
+}
+@keyframes screeenshotImageAnimateInMobile {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(217deg);
+  }
+}
+@keyframes screeenshotImageAnimateOutMobile {
+  0% {
+    transform: rotate(217deg);
+  }
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+
+@keyframes screeenshotAnimateInDesktop {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(70deg);
+  }
+}
+@keyframes screeenshotAnimateOutDesktop {
+  0% {
+    transform: rotate(70deg);
+  }
+  100% {
+    transform: rotate(200deg);
+  }
+}
+@keyframes screeenshotImageAnimateInDesktop {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(290deg);
+  }
+}
+@keyframes screeenshotImageAnimateOutDesktop {
+  0% {
+    transform: rotate(290deg);
+  }
+  100% {
+    transform: rotate(160deg);
+  }
+}
+
+.focus-in-expand {
+	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.blur-out-contract {
+	-webkit-animation: blur-out-contract 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: blur-out-contract 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes blur-out-contract {
+  0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
+  }
+}
+
+@keyframes blur-out-contract {
+  0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+  }
+  100% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px) opacity(0%);
+            filter: blur(12px) opacity(0%);
+  }
+}

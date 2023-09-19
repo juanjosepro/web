@@ -1,0 +1,34 @@
+/* background-color: rgba(245, 158, 11, 0.82);  */
+/* background-color: rgba(13, 207, 165, 0.82);  */
+/* background-color: rgba(37, 29, 203, 0.91);  */
+/* background-color: rgba(1, 221, 67, 0.82);  */
+:root {
+  /* --primary: #01df44d1; */
+  --primary: hsla(138, 99%, 44%, 0.82);
+  --secondary: hsl(0, 0%, 10%);
+  --secondary-light: rgba(26, 26, 26, 0.952);
+  --dark: hsl(0, 2%, 32%);
+  --cyan: hsl(168, 85%, 45%, 0.82);
+}
+
+.m-bg-primary {
+  background-color: var(--primary); 
+}
+.m-text-primary {
+  color: var(--primary); 
+}
+.m-bg-secondary {
+  background-color: var(--secondary); 
+}
+.m-text-secondary {
+  color: var(--secondary); 
+}
+.m-bg-dark {
+  background-color: var(--dark); 
+}
+.m-text-dark {
+  color: var(--dark); 
+}
+.m-bg-cyan, .m-text-cyan {
+  background-color: var(--cyan); 
+}

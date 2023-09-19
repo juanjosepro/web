@@ -1,0 +1,153 @@
+---
+import Social from '../components/Social.astro';
+---
+
+<div id="contact" class="scroll-animation-from-bottom-to-top m-bg-secondary min-w-full px-10">
+  <div class="container mx-auto pt-16 pb-10">
+      <div class="grid grid-cols-4 border-gray-300 border-b">
+        <div class="col-span-4 md:col-span-2 pr-0 md:pr-6">
+          <h3 class="font-poppins text-gray-300 mb-2 text-sm tracking-wider font-medium">¿DESEA CONTACTARME?</h3>
+          <p class="font-manrope text-gray-200 text-justify text-xs font-light leading-5 tracking-wide">
+            Si tienes un proyecto y buscas un perfil como el mio, o nesecitas ayuda entonces ponte en contacto conmigo.
+          </p>
+          <div class="flex flex-col pt-4">
+            <div class="flex">
+              <div class="w-full mr-2">
+                <input
+                  type="text"
+                  name="email_address"
+                  placeholder="juanjosedev@gmail.com"
+                  class="
+                    font-manrope
+                    m-input-contact
+                    p-2
+                    focus:ring-indigo-500
+                    focus:border-blue-500
+                    block
+                    w-full
+                    shadow-sm
+                    sm:text-md
+                    tracking-widest
+                    rounded-md
+                    font-bold
+                    text-xs
+                  "
+                />
+              </div>
+              <div class="rounded-md shadow">
+                <a
+                  href="mailto::juanjosedev@gmail.com"
+                  class="
+                    m-bg-cyan
+                    font-poppins
+                    w-full
+                    flex
+                    items-center
+                    justify-center
+                    px-2
+                    sm:px-8
+                    py-2
+                    border border-transparent
+                    rounded-xl
+                    text-white
+                    text-xs
+                    md:px-10
+                    magic-hover magic-hover__square
+                  "
+                >
+                  Contactar
+                </a>
+              </div>
+            </div>
+            <p class="font-manrope text-xs font-light text-gray-200 sm:max-w-xl text-justify lg:mx-0 pt-2 pb-4 tracking-wide">
+              Puedes mandarme un correo o tambien puedes escribirme por mis
+              <a href="#profile" class="text-white underline">redes sociales</a>.
+            </p>
+          </div>
+        </div>
+        <div class="col-span-2 sm:col-span-1 pb-5">
+          <h3 class="font-poppins text-gray-300 text-sm tracking-wider font-medium">EXPERIENCIA</h3>
+          <nav class="flex flex-col sm:flex-col items-start justify-center">
+            <a href=""
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Javascript
+            </a>
+            <a
+              href=""
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Typescript
+            </a>
+            <a
+              href=""
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Vue
+            </a>
+            <a
+              href=""
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Nuxt
+            </a>
+            <a
+              href=""
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Css/Scss
+            </a>
+            <a
+              href=""
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Tailwind
+            </a>
+          </nav>
+        </div>
+        <div class="col-span-2 sm:col-span-1 pl-4 pb-5">
+          <h3 class="text-gray-300 text-base tracking-wider font-medium">MENU</h3>
+          <nav class="flex flex-col sm:flex-col items-start">
+            <a
+              href="#profile"
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Inicio
+            </a>
+            <a
+              href="#experience"
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Conocimientos
+            </a>
+            <a
+              href="#projects"
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Proyectos
+            </a>
+            <a
+              href="#about"
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Sobre mi
+            </a>
+            <a
+              href="#contact"
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Contacto
+            </a>
+            <a
+              href="#"
+              class="font-poppins text-xs py-1 font-normal text-gray-200 hover:text-white">
+              Blog
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-center py-4">
+        <p class="font-manrope text-gray-200 text-center pb-3 font-light text-xs">
+          Copyright © 2021 Todos los derechos reservados por Juan Jose Pau.
+        </p>
+        <div class="flex items-center">
+          <Social dinamicClass={"social-networks"} />
+        </div>
+      </div>
+  </div>
+</div>
+
+<style>
+.m-input-contact::placeholder {
+  color: var(--secondary);
+}
+</style>
