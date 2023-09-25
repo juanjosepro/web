@@ -1,4 +1,6 @@
 <script>
+import SwitchButton from "./SwitchButton.svelte";
+
 export let showMenuMobile = false;
 $: theDynamicClass = showMenuMobile ? 'open' : '';
 $: theDynamicClass2 = showMenuMobile ? 'fade-in' : '';
@@ -20,37 +22,32 @@ function showMenuMobileButtom() {
 	<nav class="grid grid-cols-2 text-black items-center py-3 px-4 md:px-6">
 		<div class="flex items-center">
 			<!-- <div class="m-logo"></div> -->
-			<a href="/" class="font-poppins font-medium text-sm magic-hover magic-hover__square">DEV</a>
+			<a href="/" class="font-poppins font-medium text-sm magic-hover magic-hover__square text-black dark:text-gray-200">DEV</a>
 		</div>
 
 		<div class="header__links hidden lg:flex justify-between items-center">
 			<div class="tracking-widest font-poppins">
-				<a href="#profile">INICIO</a>
-				<a href="#experience">EXPERIENCIA</a>
-				<a href="#projects">PROYECTOS</a>
-				<a href="#about">SOBRE MÍ</a>
-				<a href="#contact">CONTACTO</a>
+				<a href="#profile" class="text-black dark:text-gray-100">INICIO</a>
+				<a href="#experience" class="text-black dark:text-gray-100">EXPERIENCIA</a>
+				<a href="#projects" class="text-black dark:text-gray-100">PROYECTOS</a>
+				<a href="#about" class="text-black dark:text-gray-100">SOBRE MÍ</a>
+				<a href="#contact" class="text-black dark:text-gray-100">CONTACTO</a>
 			</div>
-			<a href="#" class="text-black">
-				<!-- <i class="fas fa-moon"></i> -->
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-					<path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 01.26.77 7 7 0 009.958 7.967.75.75 0 011.067.853A8.5 8.5 0 116.647 1.921a.75.75 0 01.808.083z" clip-rule="evenodd" />
-				</svg>
-			</a>
-		</div>
-		<div class="flex items-center justify-end lg:hidden">
+
 			<!-- icon mode -->
-			<a href="#" class="mr-5 text-black">
-				<!-- <i class="fas fa-moon"></i> -->
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-					<path fill-rule="evenodd" d="M7.455 2.004a.75.75 0 01.26.77 7 7 0 009.958 7.967.75.75 0 011.067.853A8.5 8.5 0 116.647 1.921a.75.75 0 01.808.083z" clip-rule="evenodd" />
-				</svg>
-			</a>
+			<!-- svelte-ignore illegal-attribute-character -->
+			<SwitchButton client:load/>
+		</div>
+		<div class="flex items-center justify-end lg:hidden gap-5">
+			<!-- icon mode -->
+			<!-- svelte-ignore illegal-attribute-character -->
+			<SwitchButton client:load/>
+
 			<!-- icon menu -->
 			<div class="header__toggle" on:click={showMenuMobileButtom}>
-				<span class={showMenuMobile ? 'bg-white': 'bg-black'}></span>
-				<span class={showMenuMobile ? 'bg-white': 'bg-black'}></span>
-				<span class={showMenuMobile ? 'bg-white': 'bg-black'}></span>
+				<span class={showMenuMobile ? 'bg-white': 'bg-black dark:bg-white'}></span>
+				<span class={showMenuMobile ? 'bg-white': 'bg-black dark:bg-white'}></span>
+				<span class={showMenuMobile ? 'bg-white': 'bg-black dark:bg-white'}></span>
 			</div>
 		</div>
 	</nav>
@@ -131,7 +128,7 @@ function showMenuMobileButtom() {
 	.header__links a {
 		position: relative;
 		font-size: 12px;
-		color: black;
+		/* color: black; */
 		-webkit-transition: color 300ms ease-in-out;
 		transition: color 300ms ease-in-out;
 	}

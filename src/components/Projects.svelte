@@ -12,10 +12,11 @@
 
   const projects = [
     {
+      id: 'proyect_nikfort',
       title: 'NIK FORT',
       subTitle: 'Gestion de calzado',
       type: 'Aplicación web',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, harum animi? Dolorum voluptatum nesciunt quisquam! Quia, eum officiis nihil fugiat vel rerum quis.',
+      description: 'Esta aplicación es una poderosa herramienta diseñada para optimizar la gestión de productos en la industria del calzado el cual se centra en gestionar  el inventario, productos, tallas y modelos de manera eficiente.',
       date: 'octubre del 2022',
       image: shoeApp,
       tools: 'PYTHON | DJANGO | BOOTSTRAP',
@@ -23,10 +24,11 @@
       urlGit: 'https://github.com/juanjosestone/shoe-app#readme',
     },
     {
+      id: 'proyect_hotelapp_front',
       title: 'HOTEL APP',
       subTitle: 'Gestion Hotelera',
       type: 'APLICACIÓN WEB',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, harum animi? Dolorum voluptatum nesciunt quisquam! Quia, eum officiis nihil fugiat vel rerum quis.',
+      description: 'Esta aplicación simplifica la administración de habitaciones, el registro de huéspedes, un control eficiente sobre el estado de las habitaciones, reservas y las tarifas. Con roles para administradores y recepcionistas.',
       date: 'octubre del 2022',
       image: hotelApp,
       tools: 'JAVASCRIPT | VUE | VUETIFY',
@@ -34,10 +36,11 @@
       urlGit: 'https://github.com/juanjosestone/hotel-app#readme',
     },
     {
+      id: 'proyect_hotelapp_api',
       title: 'HOTEL API',
       subTitle: 'Gestion Hotelera',
       type: 'API REST',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, harum animi? Dolorum voluptatum nesciunt quisquam! Quia, eum officiis nihil fugiat vel rerum quis.',
+      description: 'La API de gestión hotelera esta diseñada para ofrecer acceso y control a las funciones clave de la aplicación de gestión hotelera. Con esta API, Facilita la sincronización de datos y la automatización de procesos.',
       date: 'octubre del 2022',
       image: apiHotelApp,
       tools: 'PHP | LARAVEL',
@@ -45,10 +48,11 @@
       urlGit: 'https://github.com/juanjosestone/api-hotel-app#readme',
     },
     {
+      id: 'proyect_stoners',
       title: 'STONERS',
       subTitle: 'Ecommerce',
       type: 'E-COMMERCE',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, harum animi? Dolorum voluptatum nesciunt quisquam! Quia, eum officiis nihil fugiat vel rerum quis.',
+      description: 'Ecommerce de calzado el cual ofrece una amplia selección de zapatos de moda para todas las edades y estilos. desde zapatillas deportivas hasta elegantes tacones, con opciones de tallas y modelos.',
       date: 'octubre del 2022',
       image: stonersWeb,
       tools: 'WORDPRESS',
@@ -56,10 +60,11 @@
       urlGit: '#',
     },
     {
+      id: 'proyect_tech_io',
       title: 'TECH IO',
       subTitle: 'Landing',
       type: 'LANDING PAGE',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, harum animi? Dolorum voluptatum nesciunt quisquam! Quia, eum officiis nihil fugiat vel rerum quis.',
+      description: 'En esta landing page, comparto mi pasión por el desarrollo de páginas web donde plasmo mis habilidades en el desarrollo de páginas web. Desde el diseño hasta la programación con las siguientes herramientas.',
       date: 'octubre del 2022',
       image: landingPageBootstrapWeb,
       tools: 'BOOTSTRAP 5',
@@ -67,10 +72,11 @@
       urlGit: 'https://github.com/JuanJoseStone/landing-page-with-bootstrap5-techpro#readme',
     },
     {
+      id: 'proyect_papper_dove',
       title: 'PAPPER DOVE',
       subTitle: 'Salas de Chat',
       type: 'Salas de Chat',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, harum animi? Dolorum voluptatum nesciunt quisquam! Quia, eum officiis nihil fugiat vel rerum quis.',
+      description: 'Esta aplicación te conecta con personas de todo el mundo en tiempo real, Con conversaciones sobre tus temas favoritos. Con una interfaz fácil de usar, En esta aplicacion plasmo mi experiencia en el desarrollo de aplicaciones web.',
       date: 'octubre del 2022',
       image: paperDoveApp,
       tools: 'JAVASCRIPT | VUE | TAILWIND',
@@ -78,10 +84,11 @@
       urlGit: 'https://github.com/JuanJoseStone/paper-dove#readme',
     },
     {
+      id: 'proyect_bootstra_io',
       title: 'BOOTSTRAP IO',
       subTitle: 'Landing',
       type: 'Sitio web con HTML, CSS y SASS',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, harum animi? Dolorum voluptatum nesciunt quisquam! Quia, eum officiis nihil fugiat vel rerum quis.',
+      description: 'En esta landing page, comparto mi pasión por el desarrollo de páginas web donde plasmo mis habilidades en el desarrollo de páginas web. Desde el diseño hasta la programación con las siguientes herramientas.',
       date: 'octubre del 2022',
       image: shoeStoreWeb,
       tools: 'HTML | CSS | SASS',
@@ -155,11 +162,39 @@
         element.classList.remove('blur-out-contract');
         element.classList.add('focus-in-expand');
       });
+
+      /* Check button like active or not */
+      const el = document.querySelector(`.like-${projectSelected.id}`)
+      if (localStorage.getItem(`like-${projectSelected.id}`)) {
+        el.classList.add('liked_project')
+      } else {
+        el.classList.remove('liked_project')
+      }
     }, 1000)
+
   }
 
   function firstWordUppercase(str) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  }
+
+  function sendEventLike(id) {
+    const el = document.querySelector(`.like-${id}`)
+    localStorage.setItem(`like-${id}`, true)
+    
+    dataLayer.push({
+      event: "click project like",
+      name: id,
+    })
+
+    setTimeout(() => {
+      if (localStorage.getItem(`like-${id}`)) {
+        el.classList.add('liked_project')
+      } else {
+        el.classList.remove('liked_project')
+      }
+    }, 500);
+
   }
 </script>
 
@@ -177,52 +212,52 @@
       </svg>
       <div class="relative w-4/5 mx-auto mb-6 md:flex md:items-end md:w-auto lg:justify-end lg:items-start lg:w-full hidden">
         <div class="project__main relative lg:w-96 lg:pt-6">
-          <h2 class="animate-focus-in-blur-out font-poppins text-gray-700 font-extralight text-4xl">{projectSelected.subTitle}</h2>
-          <h2 class="animate-focus-in-blur-out font-poppins text-gray-700 font-extrabold text-6xl">{projectSelected.title}</h2>
+          <h2 class="animate-focus-in-blur-out font-poppins text-gray-700 dark:text-gray-200 font-extralight text-4xl">{projectSelected.subTitle}</h2>
+          <h2 class="animate-focus-in-blur-out font-poppins text-gray-700 dark:text-white font-extrabold text-6xl">{projectSelected.title}</h2>
           <div class="flex items-center mt-10">
-            <a href={projectSelected.urlWeb} class="flex gap-1 items-center no-underline mr-12">
+            <a href={projectSelected.urlWeb} class="see_demo flex gap-1 items-center no-underline mr-12 dark:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
               </svg>         
               
-              <span class="font-manrope text-sm text-gray-700 font-medium">Ver demo</span>
+              <span class="font-manrope text-sm text-gray-700 font-medium dark:text-gray-200">Ver demo</span>
             </a>
-            <a href={projectSelected.urlGit} class="flex gap-1 items-center no-underline">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512">
+            <a href={projectSelected.urlGit} class="see_repo flex gap-1 items-center no-underline dark:text-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-gray-200" viewBox="0 0 512 512">
                 <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/>
               </svg>
-              <span class="font-manrope text-sm text-gray-700 font-medium">Ver repositorio</span>
+              <span class="font-manrope text-sm text-gray-700 font-medium dark:text-gray-200">Ver repositorio</span>
             </a>
           </div>
         </div>
       </div>
   
       <div class="relative w-11/12 mx-auto flex justify-center">
-        <div class="project__details fade-in-bottom p-6 rounded-lg flex flex-col gap-3 bg-white md:h-96">
-          <h3 class="font-manrope font-light text-gray-500 hidden md:block">#Detalles</h3>
-          <h3 class="font-manrope text-sm font-medium text-gray-700 block md:hidden">#{projectSelected.subTitle}</h3>
+        <div class="project__details fade-in-bottom p-6 rounded-lg flex flex-col gap-3 bg-white dark:bg-stone-800 md:h-96">
+          <h3 class="font-manrope font-light text-gray-500 dark:text-gray-200 hidden md:block">#Detalles</h3>
+          <h3 class="font-manrope text-sm font-medium text-gray-700 dark:text-white block md:hidden">#{projectSelected.subTitle}</h3>
 
-          <h2 class="font-poppins font-bold text-2xl uppercase text-gray-700 hidden md:block">{projectSelected.subTitle}</h2>
-          <h2 class="font-poppins text-xl font-normal leading-none block md:hidden">{projectSelected.type} <strong class="font-bold">{projectSelected.title}</strong></h2>
-          <small class="font-manrope font-light text-gray-700">{projectSelected.date}</small>
-          <p class="text-sm font-manrope font-light text-gray-700">{projectSelected.description}</p>
-          <small class="font-manrope text-gray-800 mb-3">{projectSelected.tools}</small>
+          <h2 class="font-poppins font-bold text-2xl uppercase text-gray-900 dark:text-gray-200 hidden md:block">{projectSelected.subTitle}</h2>
+          <h2 class="font-poppins text-xl font-normal leading-none block md:hidden dark:text-gray-200">{projectSelected.type} <strong class="font-bold">{projectSelected.title}</strong></h2>
+          <small class="font-manrope font-light text-gray-900 dark:text-gray-200">{projectSelected.date}</small>
+          <p class="text-sm font-manrope font-normal text-gray-600 dark:text-gray-200">{projectSelected.description}</p>
+          <small class="font-manrope text-gray-800 dark:text-gray-200 mb-3">{projectSelected.tools}</small>
           <div class="flex items-center md:hidden mb-3">
-            <a href={projectSelected.urlWeb} class="flex gap-1 items-center no-underline mr-6">
+            <a href={projectSelected.urlWeb} class="flex gap-1 items-center no-underline mr-6 dark:text-gray-200">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
               </svg>
               
-              <span class="font-manrope text-xs text-gray-700 font-medium">Ver demo</span>
+              <span class="font-manrope text-xs text-gray-700 dark:text-gray-200 font-medium">Ver demo</span>
             </a>
-            <a href={projectSelected.urlGit} class="flex gap-1 items-center no-underline">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 512 512">
+            <a href={projectSelected.urlGit} class="flex gap-1 items-center no-underline dark:text-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-gray-200" viewBox="0 0 512 512">
                 <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/>
               </svg>
-              <span class="font-manrope text-xs text-gray-700 font-medium">Ver repositorio</span>
+              <span class="font-manrope text-xs text-gray-700 dark:text-gray-200 font-medium">Ver repositorio</span>
             </a>
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-700 cursor-pointer">
+          <svg on:click={sendEventLike(projectSelected.id)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="{`w-6 h-6 text-gray-700 dark:text-gray-200 cursor-pointer like-${projectSelected.id}`}">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
           </svg>
         </div>
@@ -248,9 +283,9 @@
       }}>
         {#each projects as project, i}
         <SplideSlide class="{'splide' + i}">
-          <div on:click={() => onclicksplide(project, 'splide'+i)}>
+          <div on:click={() => onclicksplide(project, 'splide'+i)} class="project_item">
             <img src={project.image} alt={project.title} class="w-48 h-20 rounded mb-2 transition-all">
-            <small class="font-poppins font-extralight text-center text-xs">{firstWordUppercase(project.subTitle)}</small>
+            <small class="font-poppins font-extralight text-center text-xs dark:text-gray-200">{firstWordUppercase(project.subTitle)}</small>
           </div>
         </SplideSlide>
         {/each}
@@ -301,6 +336,7 @@
     width: calc(100% - 160px);
     height: calc(100% - 160px);
     background: white;
+    @apply dark:bg-stone-900;
     border-radius: 50%;
     box-sizing: border-box;
   }
@@ -335,5 +371,11 @@
 
   .project__details {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    @apply dark:shadow-none;
+  }
+
+  .liked_project {
+    fill: hsla(138, 99%, 44%, 0.82);
+    color: hsla(138, 99%, 44%, 0.82)
   }
 </style>

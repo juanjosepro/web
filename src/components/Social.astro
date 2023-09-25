@@ -45,10 +45,13 @@ const { dinamicClass } = Astro.props;
 
 .animate-social {
   transition: all 0.5s;
+  @apply dark:fill-white;
 }
 .animate-social.ionicon-figma {
   background: black;
   fill: white;
+  @apply dark:bg-white;
+  @apply dark:fill-stone-900;
   margin-top: 4px;
 }
 .animate-social:hover {
@@ -66,6 +69,7 @@ const { dinamicClass } = Astro.props;
 }
 .social-networks.ionicon-figma {
   background: white;
+  /* @apply dark:bg-black; */
   fill: hsl(0, 0%, 10%);
   margin-left: 4px;
 }

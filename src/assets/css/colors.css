@@ -18,7 +18,8 @@
   color: var(--primary); 
 }
 .m-bg-secondary {
-  background-color: var(--secondary); 
+  background-color: var(--secondary);
+  @apply dark:bg-zinc-950;
 }
 .m-text-secondary {
   color: var(--secondary); 
