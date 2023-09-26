@@ -87,7 +87,7 @@
       id: 'proyect_bootstra_io',
       title: 'BOOTSTRAP IO',
       subTitle: 'Landing',
-      type: 'Sitio web con HTML, CSS y SASS',
+      type: 'LANDING PAGE',
       description: 'En esta landing page, comparto mi pasión por el desarrollo de páginas web donde plasmo mis habilidades en el desarrollo de páginas web. Desde el diseño hasta la programación con las siguientes herramientas.',
       date: 'octubre del 2022',
       image: shoeStoreWeb,
@@ -210,7 +210,7 @@
       <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="absolute -right-0 top-20 w-96 hidden lg:block" style="filter: blur(130px)">
         <path fill="#0F62FE" d="M17.8,-30.2C28,-25,44.5,-30.1,52.9,-26.8C61.3,-23.5,61.5,-11.7,61.3,-0.1C61.1,11.5,60.4,23,55.7,32.7C51,42.4,42.3,50.3,32.3,48.3C22.4,46.3,11.2,34.4,3.5,28.3C-4.2,22.3,-8.5,22.2,-17.4,23.5C-26.3,24.9,-39.8,27.9,-41.7,24.2C-43.5,20.6,-33.7,10.3,-38.9,-3C-44.1,-16.3,-64.4,-32.6,-63.7,-38.3C-63,-43.9,-41.3,-38.9,-27.1,-41.8C-13,-44.7,-6.5,-55.6,-1.3,-53.3C3.8,-51,7.6,-35.4,17.8,-30.2Z" transform="translate(100 100)" />
       </svg>
-      <div class="relative w-4/5 mx-auto mb-6 md:flex md:items-end md:w-auto lg:justify-end lg:items-start lg:w-full hidden">
+      <div class="relative w-4/5 mx-auto mb-5 md:flex md:items-end md:w-auto lg:justify-end lg:items-start lg:w-full hidden">
         <div class="project__main relative lg:w-96 lg:pt-6">
           <h2 class="animate-focus-in-blur-out font-poppins text-gray-700 dark:text-gray-200 font-extralight text-4xl">{projectSelected.subTitle}</h2>
           <h2 class="animate-focus-in-blur-out font-poppins text-gray-700 dark:text-white font-extrabold text-6xl">{projectSelected.title}</h2>
@@ -233,11 +233,11 @@
       </div>
   
       <div class="relative w-11/12 mx-auto flex justify-center">
-        <div class="project__details fade-in-bottom p-6 rounded-lg flex flex-col gap-3 bg-white dark:bg-stone-800 md:h-96">
+        <div class="project__details fade-in-bottom p-6 rounded-lg flex flex-col gap-2 bg-white dark:bg-stone-800 md:h-96">
           <h3 class="font-manrope font-light text-gray-500 dark:text-gray-200 hidden md:block">#Detalles</h3>
           <h3 class="font-manrope text-sm font-medium text-gray-700 dark:text-white block md:hidden">#{projectSelected.subTitle}</h3>
 
-          <h2 class="font-poppins font-bold text-2xl uppercase text-gray-900 dark:text-gray-200 hidden md:block">{projectSelected.subTitle}</h2>
+          <h2 class="font-poppins font-bold text-xl uppercase text-gray-900 dark:text-gray-200 hidden md:block">{projectSelected.subTitle}</h2>
           <h2 class="font-poppins text-xl font-normal leading-none block md:hidden dark:text-gray-200">{projectSelected.type} <strong class="font-bold">{projectSelected.title}</strong></h2>
           <small class="font-manrope font-light text-gray-900 dark:text-gray-200">{projectSelected.date}</small>
           <p class="text-sm font-manrope font-normal text-gray-600 dark:text-gray-200">{projectSelected.description}</p>
@@ -265,7 +265,7 @@
     </div>
   
     <!-- list projects -->
-    <div class="project__list fade-in-bottom absolute left-0 bottom-8 w-full lg:left-24 lg:w-3/5">
+    <div class="project__list fade-in-bottom absolute left-0 bottom-9 w-full lg:left-24 lg:w-3/5">
       <Splide aria-label="My Favorite Images" options={{
         perPage: 4,
         perMove: 3,
@@ -277,7 +277,7 @@
         breakpoints: {
           768: {
             perPage: 2,
-            perMove: 2,
+            perMove: 1,
           }
         }
       }}>
@@ -362,7 +362,7 @@
   .project__content{
     @media (max-width: 640px) {
       position: absolute;
-      top: 280px;
+      top: 260px;
       left: 50%;
       transform: translateX(-50%);
       width: 90%;

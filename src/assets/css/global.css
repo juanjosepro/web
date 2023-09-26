@@ -31,7 +31,11 @@
 }
 
 .splide__arrow {
-  background: tomato;
+  background: var(--primary)!important;
+}
+
+.splide__arrow svg {
+  fill: #fff!important;
 }
 
 .splide__pagination__page {
