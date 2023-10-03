@@ -3,14 +3,38 @@
   import { Splide, SplideSlide } from '@splidejs/svelte-splide';
   import '@splidejs/svelte-splide/css';
   import shoeApp from '../assets/screenshots/shoe-app.png';
-  import hotelApp from '../assets/screenshots/hotel-app.png';
-  import apiHotelApp from '../assets/screenshots/api-hotel-app.png';
+  import hotelHero from '../assets/screenshots/hotel-hero.png';
+  import apiHotelHero from '../assets/screenshots/api-hotel-app.png';
   import stonersWeb from '../assets/screenshots/stoners-web.png';
   import landingPageBootstrapWeb from '../assets/screenshots/landing-page-with-bootstrap5-web.png';
   import paperDoveApp from '../assets/screenshots/paper-dove-app.png';
   import shoeStoreWeb from '../assets/screenshots/shoe-store-web.png';
 
   const projects = [
+    {
+      id: 'proyect_hotelhero_front',
+      title: 'HOTEL HERO',
+      subTitle: 'Gestion Hotelera',
+      type: 'APLICACIÓN WEB',
+      description: 'Esta aplicación simplifica la administración de habitaciones, el registro de huéspedes, un control eficiente sobre el estado de las habitaciones, reservas y las tarifas. Con roles para administradores y recepcionistas.',
+      date: 'octubre del 2022',
+      image: hotelHero,
+      tools: 'JAVASCRIPT | VUE | VUETIFY',
+      urlWeb: 'https://hotel.juanjosepau.dev',
+      urlGit: 'https://github.com/juanjosepro/hotel-hero#readme',
+    },
+    {
+      id: 'proyect_hotelhero_api',
+      title: 'HOTEL HERO API',
+      subTitle: 'Gestion Hotelera',
+      type: 'API REST',
+      description: 'La API de gestión hotelera esta diseñada para ofrecer acceso y control a las funciones clave de la aplicación de gestión hotelera. Con esta API, Facilita la sincronización de datos y la automatización de procesos.',
+      date: 'octubre del 2022',
+      image: apiHotelHero,
+      tools: 'PHP | LARAVEL',
+      urlWeb: 'https://api.hotel.juanjosepau.dev',
+      urlGit: 'https://github.com/juanjosepro/api-hotel-hero#readme',
+    },
     {
       id: 'proyect_nikfort',
       title: 'NIK FORT',
@@ -20,32 +44,8 @@
       date: 'octubre del 2022',
       image: shoeApp,
       tools: 'PYTHON | DJANGO | BOOTSTRAP',
-      urlWeb: 'https://shoe-app.juanjosepau.com',
-      urlGit: 'https://github.com/juanjosestone/shoe-app#readme',
-    },
-    {
-      id: 'proyect_hotelapp_front',
-      title: 'HOTEL APP',
-      subTitle: 'Gestion Hotelera',
-      type: 'APLICACIÓN WEB',
-      description: 'Esta aplicación simplifica la administración de habitaciones, el registro de huéspedes, un control eficiente sobre el estado de las habitaciones, reservas y las tarifas. Con roles para administradores y recepcionistas.',
-      date: 'octubre del 2022',
-      image: hotelApp,
-      tools: 'JAVASCRIPT | VUE | VUETIFY',
-      urlWeb: 'https://hotel.juanjosepau.com',
-      urlGit: 'https://github.com/juanjosestone/hotel-app#readme',
-    },
-    {
-      id: 'proyect_hotelapp_api',
-      title: 'HOTEL API',
-      subTitle: 'Gestion Hotelera',
-      type: 'API REST',
-      description: 'La API de gestión hotelera esta diseñada para ofrecer acceso y control a las funciones clave de la aplicación de gestión hotelera. Con esta API, Facilita la sincronización de datos y la automatización de procesos.',
-      date: 'octubre del 2022',
-      image: apiHotelApp,
-      tools: 'PHP | LARAVEL',
-      urlWeb: 'https://api.hotel.juanjosepau.com',
-      urlGit: 'https://github.com/juanjosestone/api-hotel-app#readme',
+      urlWeb: 'https://shoe-app.juanjosepau.dev',
+      urlGit: 'https://github.com/juanjosepro/shoe-app#readme',
     },
     {
       id: 'proyect_stoners',
@@ -69,7 +69,7 @@
       image: landingPageBootstrapWeb,
       tools: 'BOOTSTRAP 5',
       urlWeb: 'https://landing-page-with-bootstrap5-techpro.vercel.app',
-      urlGit: 'https://github.com/JuanJoseStone/landing-page-with-bootstrap5-techpro#readme',
+      urlGit: 'https://github.com/juanjosepro/landing-page-with-bootstrap5-techpro#readme',
     },
     {
       id: 'proyect_papper_dove',
@@ -81,10 +81,10 @@
       image: paperDoveApp,
       tools: 'JAVASCRIPT | VUE | TAILWIND',
       urlWeb: 'https://vue-chat-52dd6.web.app',
-      urlGit: 'https://github.com/JuanJoseStone/paper-dove#readme',
+      urlGit: 'https://github.com/juanjosepro/paper-dove#readme',
     },
     {
-      id: 'proyect_bootstra_io',
+      id: 'proyect_bootstrap_io',
       title: 'BOOTSTRAP IO',
       subTitle: 'Landing',
       type: 'LANDING PAGE',
@@ -93,7 +93,7 @@
       image: shoeStoreWeb,
       tools: 'HTML | CSS | SASS',
       urlWeb: 'https://shoe-store-blue.vercel.app/',
-      urlGit: 'https://github.com/JuanJoseStone/web-shoe-store#readme',
+      urlGit: 'https://github.com/juanjosepro/web-shoe-store#readme',
     },
   ]
 
@@ -215,14 +215,14 @@
           <h2 class="animate-focus-in-blur-out font-poppins text-gray-700 dark:text-gray-200 font-extralight text-4xl">{projectSelected.subTitle}</h2>
           <h2 class="animate-focus-in-blur-out font-poppins text-gray-700 dark:text-white font-extrabold text-6xl">{projectSelected.title}</h2>
           <div class="flex items-center mt-10">
-            <a href={projectSelected.urlWeb} class="see_demo flex gap-1 items-center no-underline mr-12 dark:text-gray-200">
+            <a href={projectSelected.urlWeb} target="_blank" class="see_demo flex gap-1 items-center underline decoration-gray-400 mr-12 dark:text-gray-200 underline-offset-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
               </svg>         
               
               <span class="font-manrope text-sm text-gray-700 font-medium dark:text-gray-200">Ver demo</span>
             </a>
-            <a href={projectSelected.urlGit} class="see_repo flex gap-1 items-center no-underline dark:text-gray-200">
+            <a href={projectSelected.urlGit} target="_blank" class="see_repo flex gap-1 items-center underline decoration-gray-400 dark:text-gray-200 underline-offset-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-gray-200" viewBox="0 0 512 512">
                 <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/>
               </svg>
@@ -231,26 +231,26 @@
           </div>
         </div>
       </div>
-  
+
       <div class="relative w-11/12 mx-auto flex justify-center">
         <div class="project__details fade-in-bottom p-6 rounded-lg flex flex-col gap-2 bg-white dark:bg-stone-800 md:h-96">
           <h3 class="font-manrope font-light text-gray-500 dark:text-gray-200 hidden md:block">#Detalles</h3>
           <h3 class="font-manrope text-sm font-medium text-gray-700 dark:text-white block md:hidden">#{projectSelected.subTitle}</h3>
 
           <h2 class="font-poppins font-bold text-xl uppercase text-gray-900 dark:text-gray-200 hidden md:block">{projectSelected.subTitle}</h2>
-          <h2 class="font-poppins text-xl font-normal leading-none block md:hidden dark:text-gray-200">{projectSelected.type} <strong class="font-bold">{projectSelected.title}</strong></h2>
+          <h2 class="font-poppins text-lg md:text-xl font-normal leading-none block md:hidden dark:text-gray-200 mb-1">{projectSelected.type} <strong class="font-bold">{projectSelected.title}</strong></h2>
           <small class="font-manrope font-light text-gray-900 dark:text-gray-200">{projectSelected.date}</small>
-          <p class="text-sm font-manrope font-normal text-gray-600 dark:text-gray-200">{projectSelected.description}</p>
-          <small class="font-manrope text-gray-800 dark:text-gray-200 mb-3">{projectSelected.tools}</small>
-          <div class="flex items-center md:hidden mb-3">
-            <a href={projectSelected.urlWeb} class="flex gap-1 items-center no-underline mr-6 dark:text-gray-200">
+          <p class="text-sm font-manrope font-normal text-gray-600 dark:text-gray-200 mb-2">{projectSelected.description}</p>
+          <small class="font-manrope text-gray-800 dark:text-gray-200 mb-2 sm:mb-1">{projectSelected.tools}</small>
+          <div class="flex items-center md:hidden mb-3 sm:mb-1">
+            <a href={projectSelected.urlWeb} class="flex gap-1 items-center mr-6 dark:text-gray-200 underline decoration-gray-400 underline-offset-2">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
               </svg>
               
-              <span class="font-manrope text-xs text-gray-700 dark:text-gray-200 font-medium">Ver demo</span>
+              <span class="font-manrope text-xs text-gray-700 dark:text-gray-200 font-medium ">Ver demo</span>
             </a>
-            <a href={projectSelected.urlGit} class="flex gap-1 items-center no-underline dark:text-gray-200">
+            <a href={projectSelected.urlGit} class="flex gap-1 items-center underline dark:text-gray-200 decoration-gray-400 underline-offset-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-gray-200" viewBox="0 0 512 512">
                 <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"/>
               </svg>
@@ -348,7 +348,7 @@
     top: 0;
     right: 0;
     transform: translateY(-50%);
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(56, 58, 59, 0.2) 0px 8px 24px;
     opacity: 1;
     z-index: 1;
     border-radius: 8px;
