@@ -4,6 +4,7 @@
   import '@splidejs/svelte-splide/css';
   import shoeApp from '../assets/screenshots/shoe-app.png';
   import hotelHero from '../assets/screenshots/hotel-hero.png';
+  import foodHero from '../assets/screenshots/food-hero-app.png';
   import apiHotelHero from '../assets/screenshots/api-hotel-app.png';
   import stonersWeb from '../assets/screenshots/stoners-web.png';
   import landingPageBootstrapWeb from '../assets/screenshots/landing-page-with-bootstrap5-web.png';
@@ -11,6 +12,18 @@
   import shoeStoreWeb from '../assets/screenshots/shoe-store-web.png';
 
   const projects = [
+    {
+      id: 'proyect_foodhero',
+      title: 'FOOD HERO',
+      subTitle: 'Gestion Hotelera',
+      type: 'APLICACIÓN WEB',
+      description: 'Esta aplicación simplifica la administración de habitaciones, el registro de huéspedes, un control eficiente sobre el estado de las habitaciones, reservas y las tarifas. Con roles para administradores y recepcionistas.',
+      date: 'enero del 2024',
+      image: foodHero,
+      tools: 'TYPESCRIPT | VUE | QUASAR | FIREBASE',
+      urlWeb: 'https://hotel.juanjosepau.dev',
+      urlGit: 'https://github.com/juanjosepro/hotel-hero#readme',
+    },
     {
       id: 'proyect_hotelhero_front',
       title: 'HOTEL HERO',

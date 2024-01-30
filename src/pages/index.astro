@@ -5,6 +5,7 @@ import Header from '../components/Header.svelte';
 import Languajes from '../components/Languajes.astro';
 import Footer from '../components/Footer.astro';
 import Projects from '../components/Projects.svelte';
+import Projectsv2 from '../components/Projectsv2.svelte';
 
 import '../assets/css/colors.css';
 import '../assets/css/global.css';
@@ -204,7 +205,8 @@ import '../assets/css/animations.css';
     <!-- <Portfolio /> -->
   </section>
 
-  <Projects client:load />
+  <!-- <Projects client:load /> -->
+  <Projectsv2 client:load />
 
 	<div id="about" class="w-full h-full mb-24 mt-12 md:mt-0">
     <div class="scroll-animation-from-left-to-right m-bg-secondary lg:rounded-xl mb-24 p-10 lg:container lg:mx-auto md:w-full text-center text-black flex flex-col items-center">
