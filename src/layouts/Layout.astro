@@ -54,8 +54,9 @@
 
 		<slot />
 
-		<script type="module" src="/src/assets/js/animations.js"></script>
     <script>
+      import "../assets/js/animations.js"
+
       let previousTitle = document.title
       window.addEventListener("blur", () => {
         previousTitle = document.title
