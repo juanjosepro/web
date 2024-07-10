@@ -80,3 +80,22 @@ window.addEventListener("scroll", show_bottom_to_top);
 window.addEventListener("scroll", show_left_to_right);
 window.addEventListener("scroll", show_top_to_bottom);
 window.addEventListener("scroll", show_right_to_left);
+
+
+// const section = document.getElementById("about");
+// const objOptions = {
+//   root: null,
+//   threshold: 0.3,
+//   rootMargin: "-10px",
+// };
+// const sectionObserver = new IntersectionObserver(callBackFunction, objOptions);
+// sectionObserver.observe(section);
+// function callBackFunction(entries) {
+//   const [entry] = entries;
+//   console.log(entry);
+//   if (entry.isIntersecting) {
+//     section.classList.remove("m-scale");
+//   } else {
+//     section.classList.add("m-scale");
+//   }
+// }

@@ -39,6 +39,10 @@ function showMenuMobileButtom() {
 			<SwitchButton client:load/>
 		</div>
 		<div class="flex items-center justify-end lg:hidden gap-5">
+			<!-- <a href="/juan-jose-pauccara-cv.pdf" target="_blank" class="btn_cv font-poppins bg-gray-900 text-white font-semibold px-4 py-2
+			rounded-xl magic-hover magic-hover__square text-sm">
+				Ver CV
+			</a> -->
 			<!-- icon mode -->
 			<!-- svelte-ignore illegal-attribute-character -->
 			<SwitchButton client:load/>

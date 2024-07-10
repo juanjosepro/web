@@ -210,3 +210,18 @@
             filter: blur(12px) opacity(0%);
   }
 }
+
+.text-gradient {
+  background-color: transparent;
+  background-image: linear-gradient(315deg, #01df44d1 0%, #58f090 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.shadow-2xl {
+  --tw-shadow-colored: 0 14px 80px -12px var(--tw-shadow-color)!important;
+}
+.m-scale {
+  transform: scale(1.1);
+}

@@ -3,7 +3,7 @@
 /* background-color: rgba(37, 29, 203, 0.91);  */
 /* background-color: rgba(1, 221, 67, 0.82);  */
 :root {
-  /* --primary: #01df44d1; */
+  /* --primary: #01df44; */
   --primary: hsla(138, 99%, 44%, 0.82);
   --secondary: hsl(0, 0%, 10%);
   --secondary-light: rgba(26, 26, 26, 0.952);
