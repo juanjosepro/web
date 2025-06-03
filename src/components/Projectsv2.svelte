@@ -3,6 +3,7 @@
   import { Splide, SplideSlide } from '@splidejs/svelte-splide';
   import '@splidejs/svelte-splide/css';
   import shoeApp from '../assets/screenshots/shoe-app.png';
+  import shoeHub from '../assets/screenshots/shoe-hub.png';
   import hotelHero from '../assets/screenshots/hotel-hero.png';
   import foodHero from '../assets/screenshots/food-hero-app.png';
   import apiHotelHero from '../assets/screenshots/api-hotel-app.png';
@@ -13,6 +14,18 @@
   import Projects from './Projects.svelte';
 
   const projects = [
+    {
+      id: 'proyect_shoe_hub',
+      title: 'SHOE HUB',
+      subTitle: 'Gestión de calzado',
+      type: 'Aplicación web',
+      description: 'Esta aplicación es una poderosa herramienta diseñada para optimizar la gestión de productos en la industria del calzado el cual se centra en gestionar  el inventario, productos, tallas y modelos de manera eficiente.',
+      date: 'enero — 2025',
+      image: shoeHub,
+      tools: 'REACT | SUPABASE | PRIMEREACT',
+      urlWeb: 'https://shoe-hub-pau.vercel.app/',
+      urlGit: 'https://github.com/juanjosepro/shoe-hub#readme',
+    },
     {
       id: 'proyect_foodhero',
       title: 'FOOD HERO',
@@ -49,18 +62,18 @@
       urlWeb: 'https://api.hotel.juanjosepau.dev',
       urlGit: 'https://github.com/juanjosepro/api-hotel-hero#readme',
     },
-    {
-      id: 'proyect_nikfort',
-      title: 'NIK FORT',
-      subTitle: 'Gestión de calzado',
-      type: 'Aplicación web',
-      description: 'Esta aplicación es una poderosa herramienta diseñada para optimizar la gestión de productos en la industria del calzado el cual se centra en gestionar  el inventario, productos, tallas y modelos de manera eficiente.',
-      date: 'octubre — 2022',
-      image: shoeApp,
-      tools: 'PYTHON | DJANGO | BOOTSTRAP',
-      urlWeb: 'https://shoe-app.juanjosepau.dev',
-      urlGit: 'https://github.com/juanjosepro/shoe-app#readme',
-    },
+    // {
+    //   id: 'proyect_nikfort',
+    //   title: 'NIK FORT',
+    //   subTitle: 'Gestión de calzado',
+    //   type: 'Aplicación web',
+    //   description: 'Esta aplicación es una poderosa herramienta diseñada para optimizar la gestión de productos en la industria del calzado el cual se centra en gestionar  el inventario, productos, tallas y modelos de manera eficiente.',
+    //   date: 'octubre — 2022',
+    //   image: shoeApp,
+    //   tools: 'PYTHON | DJANGO | BOOTSTRAP',
+    //   urlWeb: 'https://shoe-app.juanjosepau.dev',
+    //   urlGit: 'https://github.com/juanjosepro/shoe-app#readme',
+    // },
     {
       id: 'proyect_stoners',
       title: 'STONERS',
@@ -73,42 +86,42 @@
       urlWeb: 'https://stonersshoes.com',
       urlGit: '#',
     },
-    {
-      id: 'proyect_tech_io',
-      title: 'TECH IO',
-      subTitle: 'Landing',
-      type: 'LANDING PAGE',
-      description: 'En esta landing page, comparto mi pasión por el desarrollo de páginas web donde plasmo mis habilidades en el desarrollo de páginas web. Desde el diseño hasta la programación con las siguientes herramientas.',
-      date: 'octubre — 2022',
-      image: landingPageBootstrapWeb,
-      tools: 'BOOTSTRAP 5',
-      urlWeb: 'https://landing-page-with-bootstrap5-techpro.vercel.app',
-      urlGit: 'https://github.com/juanjosepro/landing-page-with-bootstrap5-techpro#readme',
-    },
-    {
-      id: 'proyect_papper_dove',
-      title: 'PAPPER DOVE',
-      subTitle: 'Salas de Chat',
-      type: 'Salas de Chat',
-      description: 'Esta aplicación te conecta con personas de todo el mundo en tiempo real, Con conversaciones sobre tus temas favoritos. Con una interfaz fácil de usar, En esta aplicacion plasmo mi experiencia en el desarrollo de aplicaciones web.',
-      date: 'octubre — 2022',
-      image: paperDoveApp,
-      tools: 'JAVASCRIPT | VUE | TAILWIND',
-      urlWeb: 'https://vue-chat-52dd6.web.app',
-      urlGit: 'https://github.com/juanjosepro/paper-dove#readme',
-    },
-    {
-      id: 'proyect_bootstrap_io',
-      title: 'BOOTSTRAP IO',
-      subTitle: 'Landing',
-      type: 'LANDING PAGE',
-      description: 'En esta landing page, comparto mi pasión por el desarrollo de páginas web donde plasmo mis habilidades en el desarrollo de páginas web. Desde el diseño hasta la programación con las siguientes herramientas.',
-      date: 'octubre — 2022',
-      image: shoeStoreWeb,
-      tools: 'HTML | CSS | SASS',
-      urlWeb: 'https://shoe-store-blue.vercel.app/',
-      urlGit: 'https://github.com/juanjosepro/web-shoe-store#readme',
-    },
+    // {
+    //   id: 'proyect_tech_io',
+    //   title: 'TECH IO',
+    //   subTitle: 'Landing',
+    //   type: 'LANDING PAGE',
+    //   description: 'En esta landing page, comparto mi pasión por el desarrollo de páginas web donde plasmo mis habilidades en el desarrollo de páginas web. Desde el diseño hasta la programación con las siguientes herramientas.',
+    //   date: 'octubre — 2022',
+    //   image: landingPageBootstrapWeb,
+    //   tools: 'BOOTSTRAP 5',
+    //   urlWeb: 'https://landing-page-with-bootstrap5-techpro.vercel.app',
+    //   urlGit: 'https://github.com/juanjosepro/landing-page-with-bootstrap5-techpro#readme',
+    // },
+    // {
+    //   id: 'proyect_papper_dove',
+    //   title: 'PAPPER DOVE',
+    //   subTitle: 'Salas de Chat',
+    //   type: 'Salas de Chat',
+    //   description: 'Esta aplicación te conecta con personas de todo el mundo en tiempo real, Con conversaciones sobre tus temas favoritos. Con una interfaz fácil de usar, En esta aplicacion plasmo mi experiencia en el desarrollo de aplicaciones web.',
+    //   date: 'octubre — 2022',
+    //   image: paperDoveApp,
+    //   tools: 'JAVASCRIPT | VUE | TAILWIND',
+    //   urlWeb: 'https://vue-chat-52dd6.web.app',
+    //   urlGit: 'https://github.com/juanjosepro/paper-dove#readme',
+    // },
+    // {
+    //   id: 'proyect_bootstrap_io',
+    //   title: 'BOOTSTRAP IO',
+    //   subTitle: 'Landing',
+    //   type: 'LANDING PAGE',
+    //   description: 'En esta landing page, comparto mi pasión por el desarrollo de páginas web donde plasmo mis habilidades en el desarrollo de páginas web. Desde el diseño hasta la programación con las siguientes herramientas.',
+    //   date: 'octubre — 2022',
+    //   image: shoeStoreWeb,
+    //   tools: 'HTML | CSS | SASS',
+    //   urlWeb: 'https://shoe-store-blue.vercel.app/',
+    //   urlGit: 'https://github.com/juanjosepro/web-shoe-store#readme',
+    // },
   ]
 
   let projectSelected = projects[0];
