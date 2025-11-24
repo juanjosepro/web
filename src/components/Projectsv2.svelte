@@ -1,90 +1,103 @@
 <script>
-  import { onMount } from 'svelte';
-  import { Splide, SplideSlide } from '@splidejs/svelte-splide';
-  import '@splidejs/svelte-splide/css';
-  import shoeApp from '../assets/screenshots/shoe-app.png';
-  import shoeHub from '../assets/screenshots/shoe-hub.png';
-  import hotelHero from '../assets/screenshots/hotel-hero.png';
-  import foodHero from '../assets/screenshots/food-hero-app.png';
-  import apiHotelHero from '../assets/screenshots/api-hotel-app.png';
-  import stonersWeb from '../assets/screenshots/stoners-web.png';
-  import landingPageBootstrapWeb from '../assets/screenshots/landing-page-with-bootstrap5-web.png';
-  import paperDoveApp from '../assets/screenshots/paper-dove-app.png';
-  import shoeStoreWeb from '../assets/screenshots/shoe-store-web.png';
-  import Projects from './Projects.svelte';
+  import { onMount } from "svelte";
+  import { Splide, SplideSlide } from "@splidejs/svelte-splide";
+  import "@splidejs/svelte-splide/css";
+  import shoeApp from "../assets/screenshots/shoe-app.png";
+  import shoeHub from "../assets/screenshots/shoe-hub.png";
+  import hotelHero from "../assets/screenshots/hotel-hero.png";
+  import foodHero from "../assets/screenshots/food-hero-app.png";
+  import apiHotelHero from "../assets/screenshots/api-hotel-app.png";
+  import jaraWeb from "../assets/screenshots/jara-web.png";
+  import stonersWeb from "../assets/screenshots/stoners-web.png";
+  import landingPageBootstrapWeb from "../assets/screenshots/landing-page-with-bootstrap5-web.png";
+  import paperDoveApp from "../assets/screenshots/paper-dove-app.png";
+  import shoeStoreWeb from "../assets/screenshots/shoe-store-web.png";
+  import Projects from "./Projects.svelte";
 
   const projects = [
     {
-      id: 'proyect_shoe_hub',
-      title: 'SHOE HUB',
-      subTitle: 'Gestión de calzado',
-      type: 'Aplicación web',
-      description: 'Esta aplicación es una poderosa herramienta diseñada para optimizar la gestión de productos en la industria del calzado el cual se centra en gestionar  el inventario, productos, tallas y modelos de manera eficiente.',
-      date: 'enero — 2025',
+      id: "proyect_shoe_hub",
+      title: "SHOE HUB",
+      subTitle: "Gestión de calzado",
+      type: "Aplicación web",
+      description:
+        "Esta aplicación es una poderosa herramienta diseñada para optimizar la gestión de productos en la industria del calzado el cual se centra en gestionar  el inventario, productos, tallas y modelos de manera eficiente.",
+      date: "enero — 2025",
       image: shoeHub,
-      tools: 'REACT | SUPABASE | PRIMEREACT',
-      urlWeb: 'https://shoe-hub-pau.vercel.app/',
-      urlGit: 'https://github.com/juanjosepro/shoe-hub#readme',
+      tools: "REACT | SUPABASE | PRIMEREACT",
+      urlWeb: "https://demo-shoe-hub.vercel.app/",
+      urlGit: "https://github.com/juanjosepro/shoehub#readme",
+      inMobile: true,
     },
     {
-      id: 'proyect_foodhero',
-      title: 'FOOD HERO',
-      subTitle: 'Gestión de Restaurantes',
-      type: 'APLICACIÓN WEB',
-      description: 'Aplicación que gestiona eficientemente un restaurante, esta aplicación abarca desde la creación y actualización del menú hasta la asignación de mesas y el seguimiento de pedidos. Simplifica tus operaciones y brinda una experiencia excepcional a los clientes con una solución integral.',
-      date: 'enero — 2024',
+      id: "proyect_restohub",
+      title: "RESTO HUB",
+      subTitle: "Gestión de Restaurantes",
+      type: "APLICACIÓN WEB",
+      description:
+        "Aplicación que gestiona eficientemente un restaurante, esta aplicación abarca desde la creación y actualización del menú hasta la asignación de mesas y el seguimiento de pedidos. Simplifica tus operaciones y brinda una experiencia excepcional a los clientes con una solución integral.",
+      date: "enero — 2024",
       image: foodHero,
-      tools: 'TYPESCRIPT | VUE | QUASAR | FIREBASE',
-      urlWeb: 'https://food-hero.juanjosepau.dev',
-      urlGit: 'https://github.com/juanjosepro/food-app#readme',
+      tools: "TYPESCRIPT | VUE | QUASAR | FIREBASE",
+      urlWeb: "https://demo-restohub.vercel.app/",
+      urlGit: "https://github.com/juanjosepro/restohub#readme",
+      inMobile: true,
     },
     {
-      id: 'proyect_hotelhero_front',
-      title: 'HOTEL HERO',
-      subTitle: 'Gestión Hotelera',
-      type: 'APLICACIÓN WEB',
-      description: 'Esta aplicación simplifica la administración de habitaciones, el registro de huéspedes, un control eficiente sobre el estado de las habitaciones, reservas y las tarifas. Con roles para administradores y recepcionistas.',
-      date: 'octubre — 2022',
+      id: "proyect_hotelhero_front",
+      title: "HOTEL HERO",
+      subTitle: "Gestión Hotelera",
+      type: "APLICACIÓN WEB",
+      description:
+        "Esta aplicación simplifica la administración de habitaciones, el registro de huéspedes, un control eficiente sobre el estado de las habitaciones, reservas y las tarifas. Con roles para administradores y recepcionistas.",
+      date: "octubre — 2022",
       image: hotelHero,
-      tools: 'JAVASCRIPT | VUE | VUETIFY',
-      urlWeb: 'https://hotel.juanjosepau.dev',
-      urlGit: 'https://github.com/juanjosepro/hotel-hero#readme',
+      tools: "JAVASCRIPT | VUE | VUETIFY",
+      urlWeb: "https://hotel.juanjosepau.dev",
+      urlGit: "https://github.com/juanjosepro/hotel-hero#readme",
+      inMobile: false,
     },
     {
-      id: 'proyect_hotelhero_api',
-      title: 'HOTEL HERO API',
-      subTitle: 'Gestión Hotelera',
-      type: 'API REST',
-      description: 'La API de gestión hotelera esta diseñada para ofrecer acceso y control a las funciones clave de la aplicación de gestión hotelera. Con esta API, Facilita la sincronización de datos y la automatización de procesos.',
-      date: 'octubre — 2022',
+      id: "proyect_hotelhero_api",
+      title: "HOTEL HERO API",
+      subTitle: "Gestión Hotelera",
+      type: "API REST",
+      description:
+        "La API de gestión hotelera esta diseñada para ofrecer acceso y control a las funciones clave de la aplicación de gestión hotelera. Con esta API, Facilita la sincronización de datos y la automatización de procesos.",
+      date: "octubre — 2022",
       image: apiHotelHero,
-      tools: 'PHP | LARAVEL',
-      urlWeb: 'https://api.hotel.juanjosepau.dev',
-      urlGit: 'https://github.com/juanjosepro/api-hotel-hero#readme',
+      tools: "PHP | LARAVEL",
+      urlWeb: "https://api.hotel.juanjosepau.dev",
+      urlGit: "https://github.com/juanjosepro/api-hotel-hero#readme",
+      inMobile: false,
     },
-    // {
-    //   id: 'proyect_nikfort',
-    //   title: 'NIK FORT',
-    //   subTitle: 'Gestión de calzado',
-    //   type: 'Aplicación web',
-    //   description: 'Esta aplicación es una poderosa herramienta diseñada para optimizar la gestión de productos en la industria del calzado el cual se centra en gestionar  el inventario, productos, tallas y modelos de manera eficiente.',
-    //   date: 'octubre — 2022',
-    //   image: shoeApp,
-    //   tools: 'PYTHON | DJANGO | BOOTSTRAP',
-    //   urlWeb: 'https://shoe-app.juanjosepau.dev',
-    //   urlGit: 'https://github.com/juanjosepro/shoe-app#readme',
-    // },
     {
-      id: 'proyect_stoners',
-      title: 'STONERS',
-      subTitle: 'Ecommerce',
-      type: 'E-COMMERCE',
-      description: 'Ecommerce de calzado el cual ofrece una amplia selección de zapatos de moda para todas las edades y estilos. desde zapatillas deportivas hasta elegantes tacones, con opciones de tallas y modelos.',
-      date: 'octubre — 2022',
+      id: "proyect_jara",
+      title: "JARA",
+      subTitle: "SITIO WEB",
+      type: "WEB SITE",
+      description:
+        "Sitio web para un laboratorio clínico, diseñado para presentar sus servicios, horarios, áreas de atención y facilitar la comunicación con los usuarios.",
+      date: "octubre — 2022",
+      image: jaraWeb,
+      tools: "HTML | CSS | JS | TAILWIND",
+      urlWeb: "https://labs-jara.vercel.app/",
+      urlGit: "#",
+      inMobile: false,
+    },
+    {
+      id: "proyect_stoners",
+      title: "STONERS",
+      subTitle: "Ecommerce",
+      type: "E-COMMERCE",
+      description:
+        "Ecommerce de calzado el cual ofrece una amplia selección de zapatos de moda para todas las edades y estilos. desde zapatillas deportivas hasta elegantes tacones, con opciones de tallas y modelos.",
+      date: "octubre — 2022",
       image: stonersWeb,
-      tools: 'WORDPRESS',
-      urlWeb: 'https://stonersshoes.com',
-      urlGit: '#',
+      tools: "WORDPRESS",
+      urlWeb: "https://stonersshoes.com",
+      urlGit: "#",
+      inMobile: false,
     },
     // {
     //   id: 'proyect_tech_io',
@@ -122,83 +135,82 @@
     //   urlWeb: 'https://shoe-store-blue.vercel.app/',
     //   urlGit: 'https://github.com/juanjosepro/web-shoe-store#readme',
     // },
-  ]
+  ];
 
   let projectSelected = projects[0];
 
   onMount(() => {
-    const screenshot = document.querySelector('.project__screenshot');
-    const image = document.querySelector('.image');
-    const elements = document.querySelectorAll('.animate-focus-in-blur-out');
+    const screenshot = document.querySelector(".project__screenshot");
+    const image = document.querySelector(".image");
+    const elements = document.querySelectorAll(".animate-focus-in-blur-out");
 
-    screenshot.classList.add('circle-animate-rotate')
-    image.classList.add('image-animate-rotate')
+    screenshot.classList.add("circle-animate-rotate");
+    image.classList.add("image-animate-rotate");
 
-    elements.forEach(element => {
-      element.classList.add('focus-in-expand');
+    elements.forEach((element) => {
+      element.classList.add("focus-in-expand");
     });
   });
 
   function onclicksplide(project, splide) {
-    const screenshot = document.querySelector('.project__screenshot');
-    const image = document.querySelector('.image');
-    const details = document.querySelector('.project__details');
-    const elements = document.querySelectorAll('.animate-focus-in-blur-out');
-    const splides = document.querySelectorAll('.splide__slide');
-    const splideActive = document.querySelector('.'+splide);
+    const screenshot = document.querySelector(".project__screenshot");
+    const image = document.querySelector(".image");
+    const details = document.querySelector(".project__details");
+    const elements = document.querySelectorAll(".animate-focus-in-blur-out");
+    const splides = document.querySelectorAll(".splide__slide");
+    const splideActive = document.querySelector("." + splide);
 
-    if (screenshot.classList.contains('circle-animate-rotate')) {  
-      screenshot.classList.remove('circle-animate-rotate')
-      image.classList.remove('image-animate-rotate')
+    if (screenshot.classList.contains("circle-animate-rotate")) {
+      screenshot.classList.remove("circle-animate-rotate");
+      image.classList.remove("image-animate-rotate");
 
-      screenshot.classList.add('circle-rotate-exit')
-      image.classList.add('image-rotate-exit')
+      screenshot.classList.add("circle-rotate-exit");
+      image.classList.add("image-rotate-exit");
     }
 
-    screenshot.offsetHeight
-    image.offsetHeight
+    screenshot.offsetHeight;
+    image.offsetHeight;
 
-    elements.forEach(element => {
-      element.classList.remove('focus-in-expand');
-      element.classList.add('blur-out-contract');
+    elements.forEach((element) => {
+      element.classList.remove("focus-in-expand");
+      element.classList.add("blur-out-contract");
     });
 
-    splides.forEach(element => {
-      if (element.classList.contains('is-active')) {
-        element.classList.remove('is-active');
+    splides.forEach((element) => {
+      if (element.classList.contains("is-active")) {
+        element.classList.remove("is-active");
       }
     });
 
-    splideActive.classList.add('is-active')
+    splideActive.classList.add("is-active");
 
     setTimeout(() => {
-      screenshot.classList.remove('circle-rotate-exit')
-      image.classList.remove('image-rotate-exit')
-      screenshot.classList.add('circle-animate-rotate')
-      image.classList.add('image-animate-rotate')
-      details.classList.remove('fade-in-bottom')
-      
-      details.offsetHeight
-      details.classList.add('fade-in-bottom');
+      screenshot.classList.remove("circle-rotate-exit");
+      image.classList.remove("image-rotate-exit");
+      screenshot.classList.add("circle-animate-rotate");
+      image.classList.add("image-animate-rotate");
+      details.classList.remove("fade-in-bottom");
+
+      details.offsetHeight;
+      details.classList.add("fade-in-bottom");
 
       projectSelected = project;
     }, 500);
-    
+
     setTimeout(() => {
-      elements.forEach(element => {
-        element.classList.remove('blur-out-contract');
-        element.classList.add('focus-in-expand');
+      elements.forEach((element) => {
+        element.classList.remove("blur-out-contract");
+        element.classList.add("focus-in-expand");
       });
 
       /* Check button like active or not */
-      const el = document.querySelector(`.like-${projectSelected.id}`)
+      const el = document.querySelector(`.like-${projectSelected.id}`);
       if (localStorage.getItem(`like-${projectSelected.id}`)) {
-        el.classList.add('liked_project')
+        el.classList.add("liked_project");
       } else {
-        el.classList.remove('liked_project')
+        el.classList.remove("liked_project");
       }
-    }, 1000)
-
+    }, 1000);
   }
 
   function firstWordUppercase(str) {
@@ -206,79 +218,204 @@
   }
 
   function sendEventLike(id) {
-    const el = document.querySelector(`.like-${id}`)
+    const el = document.querySelector(`.like-${id}`);
 
     if (localStorage.getItem(`like-${id}`)) {
-      el.classList.remove('liked_project')
-      localStorage.removeItem(`like-${id}`)
+      el.classList.remove("liked_project");
+      localStorage.removeItem(`like-${id}`);
     } else {
-      el.classList.add('liked_project')
-      localStorage.setItem(`like-${id}`, true)
+      el.classList.add("liked_project");
+      localStorage.setItem(`like-${id}`, true);
 
       dataLayer.push({
         event: "click project like",
         name: id,
-      })
+      });
     }
-    
   }
 
   function checkLiked(id) {
-    return localStorage.getItem(`like-${id}`)
+    return localStorage.getItem(`like-${id}`);
   }
 
+  const openWindowMobile = (project) => {
+    if (!project.inMobile) {
+      // window.location.href = project.urlWeb;
+      window.open(project.urlWeb, "_blank");
+      return;
+    }
+
+    const url = project.urlWeb;
+
+    // 1. Detectar si es un dispositivo móvil
+    const isMobile =
+      /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      );
+
+    // Si es un dispositivo móvil, simplemente navegamos en la pestaña actual (comportamiento normal)
+    if (isMobile) {
+      window.location.href = url;
+      return; // Detenemos la función aquí
+    }
+
+    // 2. Si es de escritorio, calculamos y abrimos la ventana emergente
+
+    // Establecer las dimensiones
+    const minWidth = 400; // Ancho mínimo deseado (ej. 400px)
+    const screenHeight = window.screen.height; // Obtiene el alto total de la pantalla
+
+    // Calculamos la posición para centrarla horizontalmente (opcional, pero mejora la UX)
+    const screenWidth = window.screen.width;
+    const leftPosition = screenWidth / 2 - minWidth / 2;
+
+    // Opciones de la ventana emergente
+    const features = [
+      `width=${minWidth}`,
+      `height=${screenHeight}`,
+      `left=${leftPosition}`,
+      `top=0`, // Para que inicie desde arriba
+      "resizable=no",
+      "scrollbars=yes",
+    ].join(",");
+
+    // Abrir la nueva ventana
+    window.open(url, "_blank", features);
+  };
 </script>
 
 <section class="project relative md:mb-24">
   <div class="container mx-auto px-6 pt-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-6">
-      { #each projects as project, i }
-      <div class="p-3">
-        <img class="image mb-3 box-shadow-0 rounded-lg block" src={project.image} alt="{project.title}">
-        <h4 class="font-manrope font-normal text-xs text-gray-500 dark:text-gray-200 uppercase mb-1">{ project.date }</h4>
-        <a href="{ project.urlWeb }" target="_blank" class="flex gap-1 items-center mb-1">
-          <h3 class="animate-focus-in-blur-out font-poppins text-gray-700 dark:text-white font-extrabold text-base">
-            {project.subTitle} — { project.title }
-          </h3>
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+      {#each projects as project, i}
+        <div class="p-3">
+          <img
+            class="image mb-3 box-shadow-0 rounded-lg block"
+            src={project.image}
+            alt={project.title}
+          />
+          <h4
+            class="font-manrope font-normal text-xs text-gray-500 dark:text-gray-200 uppercase mb-1"
+          >
+            {project.date}
+          </h4>
+          <a
+            href={project.urlWeb}
+            on:click={() => openWindowMobile(project)}
+            target="_blank"
+            class="flex gap-1 items-center mb-1"
+          >
+            <h3
+              class="animate-focus-in-blur-out font-poppins text-gray-700 dark:text-white font-extrabold text-base"
+            >
+              {project.subTitle} — {project.title}
+            </h3>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
           </svg> -->
-          
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-          </svg>
-        </a>
-        <p class="text-sm font-manrope font-normal text-gray-500 dark:text-gray-200 mb-4">{ project.description }</p>
-        <div class="flex items-center justify-between  mb-4">
-          <div class="flex items-center">
-            <a href={project.urlWeb} target="_blank" class="flex gap-1 items-center mr-6 dark:text-gray-200 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-              </svg>
-              
-              <span class="font-manrope text-sm text-gray-700 dark:text-gray-200 font-medium">Ver demo</span>
-            </a>
-            <a href={project.urlGit} target="_blank" class="flex gap-1 items-center dark:text-gray-200 ">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-              </svg>
-              
-              <span class="font-manrope text-sm text-gray-700 dark:text-gray-200 font-medium">Ver repositorio</span>
-            </a>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"
+              />
+            </svg>
+          </a>
+          <p
+            class="text-md font-manrope font-normal text-gray-600 dark:text-gray-200 mb-4"
+          >
+            {project.description}
+          </p>
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center">
+              <a
+                href={project.urlWeb}
+                on:click={() => openWindowMobile(project)}
+                target="_blank"
+                class="flex gap-1 items-center mr-6 dark:text-gray-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-3 h-3"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                  />
+                </svg>
+
+                <span
+                  class="font-manrope text-sm text-gray-700 dark:text-gray-200 font-medium"
+                  >Ver demo</span
+                >
+              </a>
+              <a
+                href={project.urlGit}
+                target="_blank"
+                class="flex gap-1 items-center dark:text-gray-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-3 h-3"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                  />
+                </svg>
+
+                <span
+                  class="font-manrope text-sm text-gray-700 dark:text-gray-200 font-medium"
+                  >Ver repositorio</span
+                >
+              </a>
+            </div>
+            <svg
+              on:click={() => sendEventLike(project.id)}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class={`w-5 h-5 text-gray-700 dark:text-gray-200 cursor-pointer like-${project.id}`}
+              class:liked_project={checkLiked(project.id)}
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z"
+              />
+            </svg>
           </div>
-          <svg on:click={() => sendEventLike(project.id)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="{`w-5 h-5 text-gray-700 dark:text-gray-200 cursor-pointer like-${project.id}`}" class:liked_project="{checkLiked(project.id)}">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z" />
-          </svg>
-        </div>
 
-
-        <div class="flex gap-1">
-          { #each project.tools.split("|") as tool }
-          <button class="py-1 px-2.5 border-none rounded-xl bg-[#00ff7e1f] text-xs text-green-500 font-bold capitalize">{ firstWordUppercase(tool) }</button>
-          { /each }
+          <div class="flex gap-1">
+            {#each project.tools.split("|") as tool}
+              <button
+                class="py-1 px-2.5 border-none rounded-xl bg-[#00ff7e1f] text-xs text-green-500 font-bold capitalize"
+                >{firstWordUppercase(tool)}</button
+              >
+            {/each}
+          </div>
         </div>
-      </div>
-      { /each }
+      {/each}
     </div>
   </div>
 </section>
@@ -290,6 +427,6 @@
 
   .liked_project {
     fill: hsla(138, 99%, 44%, 0.82);
-    color: hsla(138, 99%, 44%, 0.82)
+    color: hsla(138, 99%, 44%, 0.82);
   }
 </style>
