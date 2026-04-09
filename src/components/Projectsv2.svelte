@@ -16,6 +16,20 @@
 
   const projects = [
     {
+      id: "proyect_hotelhero_front",
+      title: "HOTEL HERO",
+      subTitle: "Gestión Hotelera",
+      type: "APLICACIÓN WEB",
+      description:
+        "Esta aplicación simplifica la administración de habitaciones, el registro de huéspedes, un control eficiente sobre el estado de las habitaciones, reservas y las tarifas. Con roles para administradores y recepcionistas.",
+      date: "Febrero — 2026",
+      image: hotelHero,
+      tools: "JAVASCRIPT | VUE | VUETIFY",
+      urlWeb: "https://demo.sh.juanjosepau.dev",
+      urlGit: "https://github.com/juanjosepro/suitehub#readme",
+      inMobile: false,
+    },
+    {
       id: "proyect_shoe_hub",
       title: "SHOE HUB",
       subTitle: "Gestión de calzado",
@@ -42,20 +56,6 @@
       urlWeb: "https://demo-restohub.vercel.app/",
       urlGit: "https://github.com/juanjosepro/restohub#readme",
       inMobile: true,
-    },
-    {
-      id: "proyect_hotelhero_front",
-      title: "HOTEL HERO",
-      subTitle: "Gestión Hotelera",
-      type: "APLICACIÓN WEB",
-      description:
-        "Esta aplicación simplifica la administración de habitaciones, el registro de huéspedes, un control eficiente sobre el estado de las habitaciones, reservas y las tarifas. Con roles para administradores y recepcionistas.",
-      date: "octubre — 2022",
-      image: hotelHero,
-      tools: "JAVASCRIPT | VUE | VUETIFY",
-      urlWeb: "https://hotel.juanjosepau.dev",
-      urlGit: "https://github.com/juanjosepro/hotel-hero#readme",
-      inMobile: false,
     },
     {
       id: "proyect_hotelhero_api",
