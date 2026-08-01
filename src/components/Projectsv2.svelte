@@ -4,6 +4,7 @@
   import "@splidejs/svelte-splide/css";
   import shoeApp from "../assets/screenshots/shoe-app.png";
   import shoeHub from "../assets/screenshots/shoe-hub.png";
+  import krolAcademy from "../assets/screenshots/krol-academy.png";
   import hotelHero from "../assets/screenshots/hotel-hero.png";
   import foodHero from "../assets/screenshots/food-hero-app.png";
   import apiHotelHero from "../assets/screenshots/api-hotel-app.png";
@@ -16,6 +17,20 @@
 
   const projects = [
     {
+      id: "project_krol_front",
+      title: "KROL",
+      subTitle: "Academia de Natación",
+      type: "APLICACIÓN WEB",
+      description:
+        "Aplicación diseñada para optimizar la gestión de una academia de natación. Permite administrar alumnos, planes de clases, horarios, asistencia y matrículas, facilitando el seguimiento de cada estudiante mediante un sistema intuitivo para administradores.",
+      date: "Junio — 2026",
+      image: krolAcademy,
+      tools: "JAVASCRIPT | REACT | FIREBASE",
+      urlWeb: "https://krol-app.vercel.app/admin/login",
+      urlGit: "https://github.com/juanjosepro/krol#readme",
+      inMobile: false,
+    },
+    {
       id: "proyect_hotelhero_front",
       title: "HOTEL HERO",
       subTitle: "Gestión Hotelera",
@@ -24,7 +39,7 @@
         "Esta aplicación simplifica la administración de habitaciones, el registro de huéspedes, un control eficiente sobre el estado de las habitaciones, reservas y las tarifas. Con roles para administradores y recepcionistas.",
       date: "Febrero — 2026",
       image: hotelHero,
-      tools: "JAVASCRIPT | VUE | VUETIFY",
+      tools: "LARAVEL | TYPESCRIPT | VUE | QUASAR",
       urlWeb: "https://demo.sh.juanjosepau.dev",
       urlGit: "https://github.com/juanjosepro/suitehub#readme",
       inMobile: false,
@@ -57,20 +72,20 @@
       urlGit: "https://github.com/juanjosepro/restohub#readme",
       inMobile: true,
     },
-    {
-      id: "proyect_hotelhero_api",
-      title: "HOTEL HERO API",
-      subTitle: "Gestión Hotelera",
-      type: "API REST",
-      description:
-        "La API de gestión hotelera esta diseñada para ofrecer acceso y control a las funciones clave de la aplicación de gestión hotelera. Con esta API, Facilita la sincronización de datos y la automatización de procesos.",
-      date: "octubre — 2022",
-      image: apiHotelHero,
-      tools: "PHP | LARAVEL",
-      urlWeb: "https://api.hotel.juanjosepau.dev",
-      urlGit: "https://github.com/juanjosepro/api-hotel-hero#readme",
-      inMobile: false,
-    },
+    // {
+    //   id: "proyect_hotelhero_api",
+    //   title: "HOTEL HERO API",
+    //   subTitle: "Gestión Hotelera",
+    //   type: "API REST",
+    //   description:
+    //     "La API de gestión hotelera esta diseñada para ofrecer acceso y control a las funciones clave de la aplicación de gestión hotelera. Con esta API, Facilita la sincronización de datos y la automatización de procesos.",
+    //   date: "octubre — 2022",
+    //   image: apiHotelHero,
+    //   tools: "PHP | LARAVEL",
+    //   urlWeb: "https://api.hotel.juanjosepau.dev",
+    //   urlGit: "https://github.com/juanjosepro/api-hotel-hero#readme",
+    //   inMobile: false,
+    // },
     {
       id: "proyect_jara",
       title: "JARA",
